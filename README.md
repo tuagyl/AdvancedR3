@@ -11,7 +11,8 @@ This is a project to learn R and automated analysis pipelines.
 
 This is an exercise to demonstrate automatic styling.
 
--It's cool -If it works
+-   It's cool
+-   If it works
 
 Also we check what happens when we make a super super long sentence to
 see if the breaks work.
