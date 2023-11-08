@@ -12,6 +12,7 @@ Imports:
     rmarkdown,
     snakecase,
     stringr,
+    targets,
     tidyr,
     usethis
 Encoding: UTF-8
