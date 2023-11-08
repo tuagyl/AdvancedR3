@@ -4,19 +4,13 @@ author: "Your Name"
 format: html
 execute:
   echo: true
+editor: 
+  markdown: 
+    wrap: 72
+    canonical: true
 ---
 
 ## Header 1
-
-Neccesary packages
-library(readxl)
-library(dplyr)
-library(tidyr)
-library(here)
-fs::dir_create(nmr_omics_dir)
- mutate(Age = as.numeric(stringr::str_extract(Age, "\\d+"))) %>%
-    rename_with(snakecase::to_snake_case)
-readr::write_csv
 
 ```{r setup}
 #| include: false
@@ -26,4 +20,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # Code chunk
 ```
+
+## This is poorly formatted
+
+-   This is item 1
+-   This is item 2
 
