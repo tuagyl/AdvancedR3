@@ -18,3 +18,5 @@ Encoding: UTF-8
 Suggests:
     gitcreds,
     renv
+URL: https://github.com/tuagyl/AdvancedR3
+BugReports: https://github.com/tuagyl/AdvancedR3/issues
