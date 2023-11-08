@@ -8,6 +8,16 @@ execute:
 
 ## Header 1
 
+Neccesary packages
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(here)
+fs::dir_create(nmr_omics_dir)
+ mutate(Age = as.numeric(stringr::str_extract(Age, "\\d+"))) %>%
+    rename_with(snakecase::to_snake_case)
+readr::write_csv
+
 ```{r setup}
 #| include: false
 knitr::opts_chunk$set(echo = TRUE)
