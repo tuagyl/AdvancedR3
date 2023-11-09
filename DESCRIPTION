@@ -3,6 +3,7 @@ Title: "Learning R"re
 Type: Project
 Version: 0.0.1
 Imports:
+    broom,
     dplyr,
     fs,
     ggplot2,
