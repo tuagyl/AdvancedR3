@@ -31,3 +31,17 @@ tar_read(df_stats_by_metabolite) %>%
 ```{r}
 tar_read(fig_metabolite_distribution)
 ```
+
+## Building the model
+
+```{r}
+log_reg_specs <- logistic_reg() %>% 
+    set_engine("glm")
+log_reg_specs
+```
+
+```{r}
+recipe_specs <- lipidomics_wide %>% 
+    create_recipe_spec(metabolite_lipid_ch_3_1)
+recipe_specs
+```
