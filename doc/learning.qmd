@@ -21,6 +21,9 @@ lipidomics <- read_csv(here::here("data/lipidomics.csv"))
 ## Basic statistics
 
 ```{r basic-stats}
+```
+
+```{r}
 
 ```
 
