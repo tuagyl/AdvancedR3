@@ -8,16 +8,19 @@ Imports:
     ggplot2,
     here,
     knitr,
+    parsnip,
     quarto,
     readr,
     readxl,
+    recipes,
     rmarkdown,
     snakecase,
     stringr,
     tarchetypes,
     targets,
     tidyr,
-    usethis
+    usethis,
+    workflows
 Encoding: UTF-8
 Suggests:
     gitcreds,
@@ -27,3 +30,4 @@ URL: https://github.com/tuagyl/AdvancedR3
 BugReports: https://github.com/tuagyl/AdvancedR3/issues
 Depends: 
     tidyverse
+    tidymodels
