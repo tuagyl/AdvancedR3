@@ -33,3 +33,4 @@ BugReports: https://github.com/tuagyl/AdvancedR3/issues
 Depends: 
     tidyverse
     tidymodels
+License: CC BY 4.0
