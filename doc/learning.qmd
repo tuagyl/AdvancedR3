@@ -1,6 +1,14 @@
 ---
 title: "Draft Quarto document"
-author: "Your Name"
+author:
+  - name: Tua Gyldenholm
+    orcid: 0001-0002-0003-0004
+    email: mymail@email.com
+    affiliations:
+      - name: Aarhus University and Aarhus University Hospital
+        address: Palle Juul-Jensens Boulevard 99
+        city: Aarhus N
+        postal-code: 8200
 format: html
 execute:
   echo: true
