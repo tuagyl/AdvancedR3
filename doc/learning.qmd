@@ -50,7 +50,7 @@ model_estimates
 #'
 #' @param data the lipidomics data set
 #'
-#' @return a data frame 
+#' @return a data frame
 calculate_estimates <- function(data) {
   data %>%
     split_by_metabolite() %>%
@@ -59,4 +59,14 @@ calculate_estimates <- function(data) {
     filter(str_detect(term, "metabolite_")) %>%
     add_original_metabolite_names(data)
 }
+```
+
+### Figore of the estimates
+
+```{r}
+model_estimates <- tar_read(df_model_estimates)
+```
+
+```{r}
+tar_read(fig_model_estimates)
 ```
