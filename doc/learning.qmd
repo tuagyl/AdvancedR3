@@ -34,44 +34,6 @@ tar_read(fig_metabolite_distribution)
 
 ## Building the model
 
-```{r}
-log_reg_specs <- logistic_reg() %>%
-  set_engine("glm")
-log_reg_specs
-```
-
-```{r}
-model_workflow <- create_model_workflow(
-  logistic_reg() %>%
-    set_engine("glm"),
-  lipidomics_wide %>%
-    create_recipe_spec(metabolite_lipid_ch_3_1)
-)
-model_workflow
-```
-
-```{r}
-fitted_model <- model_workflow %>%
-  fit(lipidomics_wide)
-fitted_model
-```
-
-```{r}
-fitted_model %>%
-  tidy_model_output()
-```
-
-```{r}
-create_model_workflow(
-  logistic_reg() %>%
-    set_engine("glm"),
-  lipidomics_wide %>%
-    create_recipe_spec(metabolite_lipid_ch_3_1)
-) %>%
-  fit(lipidomics_wide) %>%
-  tidy_model_output()
-```
-
 ### Running multiple models
 
 ```{r}
@@ -84,5 +46,17 @@ model_estimates
 ```
 
 ```{r}
-
+#' Creating model results
+#'
+#' @param data the lipidomics data set
+#'
+#' @return a data frame 
+calculate_estimates <- function(data) {
+  data %>%
+    split_by_metabolite() %>%
+    map(generate_model_results) %>%
+    list_rbind() %>%
+    filter(str_detect(term, "metabolite_")) %>%
+    add_original_metabolite_names(data)
+}
 ```
