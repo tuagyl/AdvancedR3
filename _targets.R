@@ -64,20 +64,19 @@ list(
     command = descriptive_stats(lipidomics)
   ),
   tar_target(
-      name = fig_metabolite_distribution,
-      command = plot_distributions(lipidomics)
-
+    name = fig_metabolite_distribution,
+    command = plot_distributions(lipidomics)
   ),
   tar_quarto(
-      name = quarto_doc,
-      path = "doc/learning.qmd"
+    name = quarto_website,
+    path = "."
   ),
-    tar_target(
-        name = df_model_estimates,
-        command = calculate_estimates(lipidomics)
-    ),
   tar_target(
-      name = fig_model_estimates,
-      command = plot_estimates(df_model_estimates)
+    name = df_model_estimates,
+    command = calculate_estimates(lipidomics)
+  ),
+  tar_target(
+    name = fig_model_estimates,
+    command = plot_estimates(df_model_estimates)
   )
 )

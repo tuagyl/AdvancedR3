@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "TODO.html",
+    "href": "TODO.html",
+    "title": "Lipidomics analysis",
+    "section": "",
+    "text": "Some TODO items after creating this project. Can delete this file after completing them.\n\nTODO: Fill in project details in README.md\nTODO: Read through the data, doc, and R README files and edit as necessary\nTODO: Add and commit all files under Git version control"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lipidomics study",
+    "section": "",
+    "text": "Lipidomics study"
+  },
+  {
     "objectID": "doc/learning.html",
     "href": "doc/learning.html",
     "title": "Draft Quarto document",
@@ -19,19 +33,5 @@
     "title": "Draft Quarto document",
     "section": "Building the model",
     "text": "Building the model\n\nRunning multiple models\n\n\nWarning: glm.fit: algorithm did not converge\n\n\nWarning: glm.fit: fitted probabilities numerically 0 or 1 occurred\n\nWarning: glm.fit: fitted probabilities numerically 0 or 1 occurred\n\n\n# A tibble: 12 × 5\n   term                                 estimate  std.error statistic p.value\n   &lt;chr&gt;                                   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n 1 metabolite_cd_cl_3_solvent          8.70e-  2      0.865 -2.82     0.00475\n 2 metabolite_cholesterol              2.97e+  0      0.458  2.38     0.0175 \n 3 metabolite_fa_ch_2_ch_2_coo         1.52e+  0      0.387  1.09     0.276  \n 4 metabolite_lipid_ch_2               2.59e-  3      3.14  -1.90     0.0578 \n 5 metabolite_lipid_ch_3_1             4.45e+  1      1.41   2.70     0.00697\n 6 metabolite_lipid_ch_3_2             8.85e-  1      0.361 -0.339    0.734  \n 7 metabolite_mufa_pufa                4.56e-  1      0.449 -1.75     0.0798 \n 8 metabolite_phosphatidycholine       1.28e-120 116628.    -0.00237  0.998  \n 9 metabolite_phosphatidylethanolamine 2.69e+  1      1.32   2.49     0.0129 \n10 metabolite_phospholipids            2.39e- 19  68964.    -0.000622 1.00   \n11 metabolite_pufa                     3.27e+  0      0.560  2.11     0.0345 \n12 metabolite_tms_interntal_standard   5.62e-  2      0.990 -2.91     0.00363\n\n\n\n\nFigore of the estimates"
-  },
-  {
-    "objectID": "TODO.html",
-    "href": "TODO.html",
-    "title": "Lipidomics analysis",
-    "section": "",
-    "text": "Some TODO items after creating this project. Can delete this file after completing them.\n\nTODO: Fill in project details in README.md\nTODO: Read through the data, doc, and R README files and edit as necessary\nTODO: Add and commit all files under Git version control"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lipidomics study",
-    "section": "",
-    "text": "Lipidomics study"
   }
 ]
