@@ -3,7 +3,6 @@
 #' @param data
 #'
 #' @return A data.frame/tibble.
-
 descriptive_stats <- function(data) {
   data %>%
     dplyr::group_by(metabolite) %>%
@@ -16,7 +15,6 @@ descriptive_stats <- function(data) {
 #' @param data
 #'
 #' @return A plot object.
-
 plot_distributions <- function(data) {
   metabolite_distribution_plot <- ggplot2::ggplot(data, aes(x = value)) +
     geom_histogram() +
@@ -86,4 +84,48 @@ tidy_model_output <- function(workflow_fitted_model) {
   workflow_fitted_model %>%
     workflows::extract_fit_parsnip() %>%
     broom::tidy(exponentiate = TRUE)
+}
+
+#' Convert the long form data set into a list of wide form dataframes
+#'
+#' @param data Lipidomics data set
+#'
+#' @return A list of dataframes
+split_by_metabolite <- function(data) {
+  data %>%
+    column_values_to_snakecase(metabolite) %>%
+    dplyr::group_split(metabolite) %>%
+    purrr::map(metabolites_to_wider)
+}
+
+#' Generate the results of the model
+#'
+#' @param data lipidomics data set
+#'
+#' @return A dataframe
+generate_model_results <- function(data) {
+    create_model_workflow(
+        parsnip::logistic_reg() %>%
+            parsnip::set_engine("glm"),
+        data %>%
+            create_recipe_spec(tidyselect::starts_with("metabolite_"))
+    ) %>%
+        parsnip::fit(data) %>%
+        tidy_model_output()
+}
+
+#' The data frame with the model results
+#'
+#' @param model_results the data frame with the model results
+#' @param data the original unprocessed lipidomics data set
+#'
+#' @return A data frame
+add_original_metabolite_names <- function(model_results, data) {
+    data %>%
+        dplyr::select(metabolite) %>%
+        dplyr::mutate(term = metabolite) %>%
+        column_values_to_snakecase(term) %>%
+        dplyr::mutate(term = stringr::str_c("metabolite_", term)) %>%
+        dplyr::distinct(term, metabolite) %>%
+        dplyr::right_join(model_results, by = "term")
 }

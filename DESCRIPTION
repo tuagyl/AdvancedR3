@@ -10,6 +10,7 @@ Imports:
     here,
     knitr,
     parsnip,
+    purrr,
     quarto,
     readr,
     readxl,
