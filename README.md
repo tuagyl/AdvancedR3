@@ -9,6 +9,8 @@ This is a project to learn R and automated analysis pipelines.
 
 # AdvancedR3:
 
+Check out the project's [website](https://tuagyl.github.io/AdvancedR3/)
+
 This is an exercise to demonstrate automatic styling.
 
 -   It's cool
